@@ -1,4 +1,9 @@
+{% extends 'base.html' %}
 
+{% block title %}{{ title }}{% endblock title %}
+
+
+{% block content %}
         <!-- SLIDER AREA START (slider-3) -->
         <div class="ltn__slider-area ltn__slider-3  section-bg-1">
             <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
@@ -70,8 +75,6 @@
             </div>
         </div>
         <!-- SLIDER AREA END -->
-
-
 
         <!-- ABOUT US AREA START -->
         <div class="ltn__about-us-area pt-120 pb-90 ">
@@ -338,4 +341,4 @@
         </div>
         <!-- BLOG AREA END -->
 
-        
+{% endblock content %}

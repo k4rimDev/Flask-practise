@@ -7,23 +7,28 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Quarter - Real Estate HTML Template</title>
+    <title>
+        {% block title %}{% endblock title %}
+    </title>
+    
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Place favicon.png in the root directory -->
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon" />
     <!-- Font Icons css -->
-    <link rel="stylesheet" href="css/font-icons.css">
+    <link rel="stylesheet" href="/static/css/font-icons.css">
     <!-- plugins css -->
-    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="/static/css/plugins.css">
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <!-- Responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/responsive.css") }}">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+    {% block styles %}{% endblock styles %}
 </head> 
 <body>
     <!--[if lte IE 9]>
@@ -128,7 +133,7 @@
                                 <nav>
                                     <div class="ltn__main-menu">
                                         <ul>
-                                            <li><a href="#">Home</a></li>
+                                            <li><a href="{{ url_for("core.home_page") }}">Home</a></li>
                                             <li><a href="about.html">About</a></li>
                                             <li><a href="portfolio.html">Portfolio</a></li>
                                             <li><a href="products.html">Products</a></li>
@@ -475,9 +480,9 @@
     <!-- preloader area end -->
 
     <!-- All JS Plugins -->
-    <script src="js/plugins.js"></script>
+    <script src="/static/js/plugins.js"></script>
     <!-- Main JS -->
-    <script src="js/main.js"></script>
+    <script src="/static/js/main.js"></script>
 
 </body>
 
